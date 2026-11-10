@@ -1,0 +1,4892 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="theme-color" content="#7a152d">
+
+<meta name="description"
+content="SUBITA INFRATECH — Construction, Infrastructure, Residential & Commercial Development Company in Fazilnagar, Kushinagar, Uttar Pradesh.">
+
+<meta name="author" content="SUBITA INFRATECH">
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://subitainfratech.co.in/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="SUBITA INFRATECH">
+<meta property="og:description"
+content="Construction, Infrastructure, Residential & Commercial Development Solutions.">
+<meta property="og:url" content="https://subitainfratech.co.in/">
+<meta property="og:image" content="https://subitainfratech.co.in/logo.png">
+<meta property="og:site_name" content="SUBITA INFRATECH">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SUBITA INFRATECH">
+<meta name="twitter:description"
+content="Construction, Infrastructure, Residential & Commercial Development Solutions.">
+<meta name="twitter:image" content="https://subitainfratech.co.in/logo.png">
+
+<!-- SUBITA INFRATECH Favicon --> 
+<link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+<link rel="shortcut icon" href="./favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+<link rel="manifest" href="./site.webmanifest" />
+      
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+crossorigin="anonymous"
+referrerpolicy="no-referrer">
+
+<!-- Three.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<title>SUBITA INFRATECH</title>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ConstructionBusiness",
+  "name":"SUBITA INFRATECH",
+  "alternateName":"सुबिता इंफ्राटेक",
+  "url":"https://subitainfratech.co.in/",
+  "logo":"https://subitainfratech.co.in/logo.png",
+  "image":"https://subitainfratech.co.in/logo.png",
+  "telephone":"+918948517532",
+  "email":"subitainfratech@gmail.com",
+  "priceRange":"₹₹",
+  "address":{
+    "@type":"PostalAddress",
+    "addressLocality":"Fazilnagar Kushinagar",
+    "addressRegion":"Uttar Pradesh",
+    "postalCode":"274401",
+    "addressCountry":"IN"
+  },
+  "sameAs":[
+    "https://www.facebook.com/subitainfratech/",
+    "https://www.instagram.com/subitainfratech/",
+    "https://www.youtube.com/@subitainfratech"
+  ]
+}
+</script>
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+  --bg:#ffffff;
+  --bg-alt:#f8fafc;
+  --card:#ffffff;
+
+  --maroon:#7a152d;
+  --maroon-dark:#4d0a1a;
+  --maroon-light:#9e1f3b;
+
+  --maroon-soft:rgba(122,21,45,.07);
+  --maroon-border:rgba(122,21,45,.16);
+  --maroon-glow:rgba(122,21,45,.16);
+
+  --gold:#c59b27;
+  --gold-light:#d4a72c;
+
+  --text:#0f172a;
+  --muted:#475569;
+  --light:#64748b;
+
+  --green:#25d366;
+
+  --border:rgba(15,23,42,.08);
+
+  --shadow-sm:0 5px 18px rgba(15,23,42,.05);
+  --shadow-md:0 14px 35px rgba(15,23,42,.08);
+  --shadow-lg:0 25px 55px rgba(15,23,42,.12);
+
+  --radius:20px;
+  --max:1180px;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:90px;
+}
+
+body{
+  margin:0;
+  font-family:
+    Inter,
+    "Noto Sans Devanagari",
+    sans-serif;
+
+  color:var(--text);
+  background:#fff;
+  line-height:1.65;
+  overflow-x:hidden;
+}
+
+body.menu-open{
+  overflow:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+button{
+  font:inherit;
+  cursor:pointer;
+}
+
+.container{
+  width:min(calc(100% - 32px),var(--max));
+  margin:auto;
+  position:relative;
+  z-index:3;
+}
+
+
+/* =========================================================
+   3D BACKGROUND
+========================================================= */
+
+#canvas3d{
+  position:fixed;
+  inset:0;
+
+  width:100vw;
+  height:100vh;
+
+  display:block;
+
+  z-index:1;
+  pointer-events:none;
+
+  opacity:.62;
+
+  background:transparent;
+
+  will-change:transform;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.topbar{
+  background:
+    linear-gradient(
+      90deg,
+      var(--maroon-dark),
+      var(--maroon)
+    );
+
+  color:#fff;
+  font-size:13px;
+  padding:9px 0;
+
+  position:relative;
+  z-index:1001;
+}
+
+.topin{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.topin div{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.topbar a{
+  transition:.2s ease;
+  opacity:.95;
+}
+
+.topbar a:hover{
+  color:var(--gold-light);
+  opacity:1;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+
+  background:rgba(255,255,255,.90);
+
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+
+  border-bottom:1px solid var(--border);
+  box-shadow:0 5px 22px rgba(15,23,42,.05);
+}
+
+.nav{
+  min-height:76px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:20px;
+  position:relative;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-shrink:0;
+}
+
+.brand-logo{
+  width:50px;
+  height:50px;
+
+  object-fit:contain;
+  border-radius:50%;
+
+  background:#fff;
+  border:2px solid var(--maroon);
+  padding:2px;
+
+  box-shadow:var(--shadow-sm);
+}
+
+.brand strong{
+  display:block;
+
+  font-size:18px;
+  font-weight:800;
+  letter-spacing:-.2px;
+
+  color:var(--maroon-dark);
+}
+
+
+/* =========================================================
+   NAV
+========================================================= */
+
+.nav nav{
+  margin-left:auto;
+}
+
+.nav ul{
+  display:flex;
+  align-items:center;
+
+  list-style:none;
+  gap:5px;
+}
+
+.nav li{
+  position:relative;
+}
+
+.nav li>a{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:7px;
+
+  padding:10px 15px;
+
+  border-radius:11px;
+
+  font-size:14px;
+  font-weight:600;
+
+  color:var(--text);
+
+  transition:
+    background .25s ease,
+    color .25s ease,
+    transform .25s ease;
+}
+
+.nav li>a:hover{
+  background:var(--maroon-soft);
+  color:var(--maroon);
+  transform:translateY(-1px);
+}
+
+.nav li.more{
+  border-left:1px solid var(--border);
+  margin-left:8px;
+  padding-left:8px;
+}
+
+
+/* =========================================================
+   MORE
+========================================================= */
+
+.more-menu{
+  position:absolute;
+
+  top:calc(100% + 10px);
+  right:0;
+
+  width:235px;
+  padding:8px;
+
+  background:#fff;
+
+  border:1px solid var(--maroon-border);
+  border-radius:16px;
+
+  box-shadow:0 22px 45px rgba(15,23,42,.15);
+
+  opacity:0;
+  visibility:hidden;
+
+  transform:
+    translateY(-8px)
+    scale(.98);
+
+  transform-origin:top right;
+
+  transition:
+    opacity .2s ease,
+    transform .2s ease,
+    visibility .2s ease;
+
+  z-index:3000;
+}
+
+.more.open .more-menu{
+  opacity:1;
+  visibility:visible;
+
+  transform:
+    translateY(0)
+    scale(1);
+}
+
+.more-menu a{
+  width:100% !important;
+  justify-content:flex-start !important;
+
+  padding:12px !important;
+  gap:11px;
+}
+
+.more-menu a:hover{
+  background:var(--maroon-soft) !important;
+  color:var(--maroon) !important;
+}
+
+
+/* =========================================================
+   MENU BUTTON
+========================================================= */
+
+.menu-toggle{
+  display:none;
+
+  width:44px;
+  height:44px;
+
+  place-items:center;
+
+  border:1px solid var(--maroon-border);
+  border-radius:12px;
+
+  background:#fff;
+  color:var(--maroon);
+
+  font-size:18px;
+
+  transition:.2s;
+
+  margin-left:auto;
+}
+
+.menu-toggle:hover{
+  background:var(--maroon);
+  color:#fff;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  position:relative;
+  isolation:isolate;
+
+  min-height:690px;
+
+  display:flex;
+  align-items:center;
+
+  overflow:hidden;
+
+  padding:90px 0 80px;
+
+  background:
+    radial-gradient(
+      circle at 80% 25%,
+      rgba(122,21,45,.055),
+      transparent 45%
+    ),
+
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(197,155,39,.035),
+      transparent 40%
+    ),
+
+    rgba(255,255,255,.70);
+}
+
+.hero-grid{
+  display:grid;
+
+  grid-template-columns:
+    1.2fr .8fr;
+
+  gap:50px;
+  align-items:center;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+
+  gap:8px;
+
+  background:var(--maroon-soft);
+  border:1px solid var(--maroon-border);
+
+  color:var(--maroon);
+
+  padding:7px 16px;
+
+  border-radius:30px;
+
+  font-size:12px;
+  font-weight:800;
+
+  letter-spacing:1px;
+  text-transform:uppercase;
+
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:
+    clamp(38px,5.5vw,64px);
+
+  line-height:1.1;
+  letter-spacing:-1.7px;
+
+  margin-bottom:22px;
+  font-weight:800;
+
+  color:var(--text);
+}
+
+.hero h1 span{
+  color:var(--maroon);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--maroon),
+      var(--maroon-light)
+    );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  color:var(--muted);
+
+  font-size:18px;
+  max-width:590px;
+
+  margin-bottom:30px;
+}
+
+.actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn{
+  min-height:52px;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:10px;
+
+  padding:0 26px;
+
+  border-radius:13px;
+
+  border:1px solid transparent;
+
+  font-weight:700;
+  font-size:15px;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    background .3s ease;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+
+  box-shadow:
+    0 14px 28px rgba(122,21,45,.22);
+}
+
+.primary{
+  background:
+    linear-gradient(
+      135deg,
+      var(--maroon),
+      var(--maroon-light)
+    );
+
+  color:#fff;
+  border-color:var(--maroon-dark);
+}
+
+.secondary{
+  color:var(--maroon-dark);
+
+  border-color:var(--maroon-border);
+
+  background:rgba(255,255,255,.88);
+
+  box-shadow:var(--shadow-sm);
+}
+
+.secondary:hover{
+  background:var(--maroon-soft);
+  border-color:var(--maroon);
+}
+
+
+/* =========================================================
+   GLASS CARDS
+========================================================= */
+
+.hero-card,
+.card,
+.process,
+.owner,
+.stat,
+.why-card,
+.wa-panel{
+
+  background:
+    rgba(255,255,255,.82) !important;
+
+  border:
+    1px solid var(--maroon-border) !important;
+
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+
+  border-radius:var(--radius);
+
+  box-shadow:var(--shadow-md);
+
+  color:var(--text) !important;
+
+  transform-style:preserve-3d;
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+}
+
+.hero-card{
+  padding:35px;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-card::before{
+  content:"";
+
+  position:absolute;
+
+  width:160px;
+  height:160px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(197,155,39,.13),
+      transparent 70%
+    );
+
+  top:-70px;
+  right:-70px;
+
+  pointer-events:none;
+}
+
+.card:hover,
+.process:hover,
+.owner:hover,
+.stat:hover,
+.why-card:hover,
+.hero-card:hover{
+  border-color:var(--maroon) !important;
+
+  box-shadow:
+    var(--shadow-lg),
+    0 0 30px var(--maroon-glow) !important;
+}
+
+
+/* =========================================================
+   TRUST
+========================================================= */
+
+.trust{
+  background:rgba(255,255,255,.84);
+
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+
+  position:relative;
+  z-index:5;
+
+  box-shadow:var(--shadow-sm);
+}
+
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+
+.trust-item{
+  padding:26px 16px;
+
+  text-align:center;
+
+  border-right:1px solid var(--border);
+
+  transition:.3s ease;
+}
+
+.trust-item:last-child{
+  border-right:none;
+}
+
+.trust-item:hover{
+  background:var(--maroon-soft);
+}
+
+.trust-item i{
+  color:var(--maroon);
+
+  font-size:26px;
+
+  margin-bottom:10px;
+}
+
+.trust-item strong{
+  display:block;
+
+  font-size:15px;
+  font-weight:700;
+}
+
+.trust-item span{
+  color:var(--muted);
+  font-size:13px;
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+section{
+  padding:95px 0;
+
+  position:relative;
+  z-index:2;
+}
+
+.bg-alt{
+  background:rgba(248,250,252,.80);
+
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+
+.head{
+  max-width:720px;
+
+  margin:0 auto 52px;
+
+  text-align:center;
+}
+
+.head h2{
+  font-size:
+    clamp(30px,4vw,44px);
+
+  line-height:1.15;
+
+  margin-bottom:14px;
+
+  font-weight:800;
+}
+
+.head p{
+  color:var(--muted);
+  font-size:16px;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about{
+  display:grid;
+
+  grid-template-columns:
+    1.1fr .9fr;
+
+  gap:45px;
+
+  align-items:center;
+}
+
+.about h3{
+  font-size:32px;
+
+  margin-bottom:16px;
+
+  color:var(--maroon-dark);
+
+  font-weight:800;
+}
+
+.about p{
+  color:var(--muted);
+
+  margin-bottom:16px;
+
+  font-size:16px;
+}
+
+.points{
+  display:grid;
+  gap:14px;
+
+  margin-top:22px;
+}
+
+.points div{
+  display:flex;
+  gap:12px;
+
+  color:var(--text);
+  font-weight:500;
+}
+
+.points i{
+  color:var(--maroon);
+  margin-top:4px;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats{
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:20px;
+}
+
+.stat{
+  padding:28px;
+  text-align:center;
+}
+
+.stat strong{
+  display:block;
+
+  font-size:38px;
+
+  color:var(--maroon);
+
+  font-weight:800;
+}
+
+.stat span{
+  color:var(--muted);
+
+  font-size:14px;
+  font-weight:600;
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.cards{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:24px;
+}
+
+.card{
+  padding:32px 28px;
+}
+
+.icon{
+  width:60px;
+  height:60px;
+
+  display:grid;
+  place-items:center;
+
+  background:var(--maroon-soft);
+  color:var(--maroon);
+
+  border:1px solid var(--maroon-border);
+
+  border-radius:16px;
+
+  font-size:24px;
+
+  margin-bottom:22px;
+
+  transition:.3s ease;
+}
+
+.card:hover .icon{
+  transform:
+    translateZ(25px)
+    scale(1.06);
+
+  background:var(--maroon);
+  color:#fff;
+}
+
+.card h3,
+.process h3,
+.why-card h3{
+  font-size:20px;
+
+  margin-bottom:12px;
+
+  font-weight:700;
+}
+
+.card p,
+.process p,
+.why-card p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+
+/* =========================================================
+   PROCESS
+========================================================= */
+
+.process-grid,
+.why{
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:24px;
+}
+
+.process,
+.why-card{
+  padding:32px 28px;
+}
+
+.num{
+  font-size:44px;
+
+  font-weight:800;
+
+  color:var(--maroon);
+
+  line-height:1;
+
+  margin-bottom:16px;
+}
+
+.why-card i{
+  color:var(--maroon);
+
+  font-size:30px;
+
+  margin-bottom:18px;
+
+  display:block;
+}
+
+
+/* =========================================
+   SUBITA INFRATECH - PREMIUM TEAM DESIGN
+========================================= */
+
+#owners .owners {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 40px auto 0;
+}
+
+#owners .owner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 30px 22px;
+    min-width: 0;
+    min-height: 390px;
+
+    border: 1px solid var(--maroon-border);
+    border-radius: 25px;
+
+    background: rgba(255,255,255,.94) !important;
+
+    box-shadow: 0 12px 35px rgba(0,0,0,.10);
+
+    gap: 18px;
+}
+
+/* PHOTO FRAME */
+
+#owners .avatar {
+    width: 210px !important;
+    height: 210px !important;
+
+    flex-shrink: 0;
+    overflow: hidden;
+
+    border-radius: 25px !important;
+
+    padding: 5px;
+
+    background: white !important;
+
+    border: 3px solid var(--gold-light);
+
+    box-shadow: 0 8px 22px rgba(122,21,45,.20);
+}
+
+/* ACTUAL PHOTO */
+
+#owners .avatar img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 19px !important;
+}
+
+/* NAME */
+
+#owners .owner-info {
+    width: 100%;
+    min-width: 0;
+}
+
+#owners .owner h3 {
+    font-size: 25px;
+    font-weight: 800;
+
+    color: var(--maroon-dark);
+
+    margin: 5px 0 8px;
+
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+}
+
+#owners .owner p {
+    font-size: 16px;
+    color: var(--muted);
+
+    white-space: normal;
+    margin: 0;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    #owners .owners {
+        gap: 20px;
+    }
+
+    #owners .avatar {
+        width: 175px !important;
+        height: 175px !important;
+    }
+
+    #owners .owner {
+        min-height: 340px;
+    }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    #owners .owners {
+        grid-template-columns: 1fr;
+        gap: 22px;
+
+        max-width: 380px;
+    }
+
+    #owners .owner {
+        min-height: auto;
+        padding: 25px 18px;
+    }
+
+    #owners .avatar {
+        width: 185px !important;
+        height: 185px !important;
+    }
+
+    #owners .owner h3 {
+        font-size: 22px;
+    }
+
+    #owners .owner p {
+        font-size: 14px;
+    }
+
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 360px) {
+
+    #owners .avatar {
+        width: 155px !important;
+        height: 155px !important;
+    }
+
+    #owners .owner h3 {
+        font-size: 19px;
+    }
+
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-grid{
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:45px;
+
+  align-items:center;
+}
+
+.contact-grid h2{
+  font-size:
+    clamp(32px,4.5vw,48px);
+
+  line-height:1.2;
+
+  margin-bottom:16px;
+
+  font-weight:800;
+}
+
+.contact-grid>div>p{
+  color:var(--muted);
+
+  font-size:16px;
+
+  line-height:1.7;
+
+  margin-bottom:25px;
+}
+
+.contact-list{
+  display:grid;
+  gap:18px;
+
+  margin-top:20px;
+}
+
+.contact-list a,
+.contact-list div{
+  display:flex;
+  align-items:center;
+
+  gap:14px;
+
+  color:var(--text);
+
+  font-size:15px;
+  font-weight:600;
+}
+
+.contact-list i{
+  width:46px;
+  height:46px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:12px;
+
+  background:var(--maroon-soft);
+  color:var(--maroon);
+
+  border:1px solid var(--maroon-border);
+
+  font-size:18px;
+
+  flex-shrink:0;
+}
+
+
+/* =========================================================
+   SOCIAL
+========================================================= */
+
+.social{
+  display:flex;
+  gap:12px;
+
+  margin-top:28px;
+}
+
+.social a{
+  width:46px;
+  height:46px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:12px;
+
+  background:#fff;
+
+  border:1px solid var(--maroon-border);
+
+  color:var(--maroon);
+
+  transition:.3s ease;
+
+  box-shadow:var(--shadow-sm);
+}
+
+.social a:hover{
+  background:var(--maroon);
+  color:#fff;
+
+  transform:translateY(-3px);
+
+  box-shadow:
+    0 10px 22px rgba(122,21,45,.22);
+}
+
+
+/* =========================================================
+   WHATSAPP PANEL
+========================================================= */
+
+.wa-panel{
+  padding:35px;
+
+  display:flex;
+  gap:20px;
+}
+
+.wa-panel-icon{
+  width:60px;
+  height:60px;
+
+  flex:0 0 60px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:18px;
+
+  background:var(--green);
+  color:#fff;
+
+  font-size:30px;
+
+  box-shadow:
+    0 10px 25px rgba(37,211,102,.30);
+}
+
+.wa-panel-tag{
+  color:#1fb855;
+
+  font-size:12px;
+  font-weight:800;
+
+  letter-spacing:1.5px;
+
+  margin-bottom:7px;
+}
+
+.wa-actions{
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:12px;
+
+  margin-top:22px;
+}
+
+.wa-quick{
+  min-height:48px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:8px;
+
+  padding:10px;
+
+  border:1px solid var(--maroon-border);
+
+  border-radius:12px;
+
+  background:var(--maroon-soft);
+
+  color:var(--maroon-dark);
+
+  font-size:13px;
+  font-weight:700;
+
+  transition:.3s ease;
+}
+
+.wa-quick i{
+  color:var(--green);
+}
+
+.wa-quick:hover{
+  border-color:var(--green);
+
+  background:
+    rgba(37,211,102,.10);
+
+  transform:translateY(-2px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  background:#0f172a;
+
+  color:#94a3b8;
+
+  padding:65px 0 25px;
+
+  position:relative;
+
+  z-index:2;
+}
+
+.foot{
+  display:grid;
+
+  grid-template-columns:
+    1.2fr .8fr .8fr;
+
+  gap:40px;
+
+  padding-bottom:40px;
+
+  border-bottom:
+    1px solid rgba(255,255,255,.1);
+}
+
+.foot h4{
+  color:#fff;
+
+  margin-bottom:16px;
+
+  font-size:18px;
+}
+
+.links{
+  display:grid;
+  gap:12px;
+
+  font-size:14px;
+}
+
+.links a:hover{
+  color:var(--gold-light);
+}
+
+.copy{
+  padding-top:25px;
+
+  text-align:center;
+
+  font-size:13px;
+
+  color:#64748b;
+}
+
+
+/* =========================================================
+   FLOATING BUTTONS
+========================================================= */
+
+.floating-side-stack{
+  position:fixed;
+
+  right:20px;
+  bottom:25px;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:12px;
+
+  z-index:1020;
+}
+
+.float{
+  width:56px;
+  height:56px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:50%;
+
+  background:var(--green);
+  color:#fff;
+
+  font-size:28px;
+
+  box-shadow:
+    0 10px 30px rgba(37,211,102,.35);
+
+  animation:
+    whatsappPulse 2.8s infinite;
+
+  transition:.3s;
+}
+
+.float:hover{
+  transform:
+    scale(1.08)
+    rotate(8deg);
+}
+
+.top{
+  width:44px;
+  height:44px;
+
+  display:none;
+  place-items:center;
+
+  border:1px solid var(--maroon-border);
+
+  border-radius:12px;
+
+  background:#fff;
+  color:var(--maroon);
+
+  box-shadow:var(--shadow-sm);
+
+  transition:.3s;
+}
+
+.top.show{
+  display:grid;
+}
+
+.top:hover{
+  background:var(--maroon);
+  color:#fff;
+}
+
+
+/* =========================================================
+   REVEAL
+========================================================= */
+
+.reveal-3d{
+  opacity:0;
+
+  transform:
+    translateY(28px)
+    scale(.985);
+
+  transition:
+    opacity .7s ease,
+    transform .7s cubic-bezier(.165,.84,.44,1);
+
+  will-change:
+    opacity,
+    transform;
+}
+
+.reveal-3d.active{
+  opacity:1;
+
+  transform:
+    translateY(0)
+    scale(1);
+}
+
+
+/* =========================================================
+   WHATSAPP PULSE
+========================================================= */
+
+@keyframes whatsappPulse{
+
+  0%,100%{
+    box-shadow:
+      0 10px 30px rgba(37,211,102,.35);
+  }
+
+  50%{
+    box-shadow:
+      0 10px 35px rgba(37,211,102,.60),
+      0 0 0 11px rgba(37,211,102,.10);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:899px){
+
+  .menu-toggle{
+    display:grid;
+  }
+
+  .nav nav{
+    position:absolute;
+
+    top:calc(100% + 10px);
+    right:0;
+
+    width:270px;
+
+    max-height:
+      calc(100vh - 100px);
+
+    overflow-y:auto;
+
+    background:#fff;
+
+    border:
+      1px solid var(--maroon-border);
+
+    border-radius:17px;
+
+    padding:12px;
+
+    box-shadow:
+      0 22px 45px rgba(15,23,42,.15);
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:
+      translateY(-10px)
+      scale(.96);
+
+    transition:
+      opacity .25s ease,
+      transform .25s ease,
+      visibility .25s ease;
+  }
+
+  .nav nav.open{
+    opacity:1;
+    visibility:visible;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+  .nav ul{
+    flex-direction:column;
+    align-items:stretch;
+
+    width:100%;
+  }
+
+  .nav li{
+    width:100%;
+  }
+
+  .nav li>a{
+    justify-content:flex-start;
+
+    width:100%;
+
+    padding:13px 14px;
+  }
+
+  .nav li.more{
+    border-left:none;
+
+    margin-left:0;
+    padding-left:0;
+
+    border-top:
+      1px solid var(--border);
+
+    padding-top:8px;
+    margin-top:4px;
+  }
+
+  .more-menu{
+    position:static;
+
+    width:100%;
+
+    display:none;
+
+    margin-top:5px;
+
+    box-shadow:none;
+    border:none;
+
+    background:#f8fafc;
+
+    transform:none;
+
+    opacity:1;
+    visibility:visible;
+  }
+
+  .more.open .more-menu{
+    display:block;
+    transform:none;
+  }
+
+  .hero-grid,
+  .about,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    min-height:auto;
+    padding:75px 0 70px;
+  }
+
+  .cards{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .process-grid,
+  .why{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .trust-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .trust-item:nth-child(2){
+    border-right:none;
+  }
+
+  .foot{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .tilt-card{
+    transform:none !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:600px){
+
+  .container{
+    width:
+      min(
+        calc(100% - 24px),
+        var(--max)
+      );
+  }
+
+  .topbar{
+    font-size:11px;
+    padding:8px 0;
+  }
+
+  .topin{
+    justify-content:center;
+    text-align:center;
+    gap:6px;
+  }
+
+  .topin div{
+    justify-content:center;
+    gap:12px;
+  }
+
+  .brand-logo{
+    width:44px;
+    height:44px;
+  }
+
+  .brand strong{
+    font-size:15px;
+  }
+
+  .nav{
+    min-height:68px;
+  }
+
+  .hero{
+    padding:65px 0 60px;
+  }
+
+  .hero h1{
+    font-size:36px;
+    letter-spacing:-1px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .actions{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .hero-card{
+    padding:27px;
+  }
+
+  section{
+    padding:72px 0;
+  }
+
+  .head{
+    margin-bottom:38px;
+  }
+
+  .head h2{
+    font-size:30px;
+  }
+
+  .cards,
+  .process-grid,
+  .why,
+  .trust-grid,
+  .owners,
+  .foot{
+    grid-template-columns:1fr;
+  }
+
+  .trust-item{
+    border-right:none;
+
+    border-bottom:
+      1px solid var(--border);
+  }
+
+  .trust-item:last-child{
+    border-bottom:none;
+  }
+
+  .stats{
+    grid-template-columns:
+      repeat(2,1fr);
+
+    gap:12px;
+  }
+
+  .stat{
+    padding:22px 12px;
+  }
+
+  .stat strong{
+    font-size:30px;
+  }
+
+  .about h3{
+    font-size:27px;
+  }
+
+  .owner{
+    padding:22px 18px;
+  }
+
+  .owner h3{
+    font-size:17px;
+  }
+
+  .owner p{
+    font-size:13px;
+  }
+
+  .avatar{
+    width:58px;
+    height:58px;
+    font-size:19px;
+  }
+
+  .wa-panel{
+    flex-direction:column;
+    padding:27px;
+  }
+
+  .wa-actions{
+    grid-template-columns:1fr;
+  }
+
+  .floating-side-stack{
+    right:14px;
+
+    bottom:
+      calc(
+        16px +
+        env(safe-area-inset-bottom)
+      );
+  }
+
+  .float{
+    width:54px;
+    height:54px;
+  }
+
+  #canvas3d{
+    opacity:.44;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  *,
+  *::before,
+  *::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+
+  #canvas3d{
+    display:none;
+  }
+
+  .reveal-3d{
+    opacity:1;
+    transform:none;
+  }
+}
+
+/* ===== SUBITA PREMIUM INQUIRY FORM ===== */
+
+.inquiry-panel {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid var(--maroon-border);
+    border-radius: 22px;
+    box-shadow: var(--shadow-md);
+}
+
+.inquiry-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.inquiry-heading h3 {
+    color: var(--maroon);
+    font-size: 26px;
+    margin: 12px 0 6px;
+}
+
+.inquiry-heading p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.inquiry-icon {
+    width: 58px;
+    height: 58px;
+    display: inline-grid;
+    place-items: center;
+    border-radius: 16px;
+    background: var(--maroon);
+    color: #fff;
+    font-size: 25px;
+}
+
+.inquiry-group {
+    margin-bottom: 15px;
+}
+
+.inquiry-group input,
+.inquiry-group select,
+.inquiry-group textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 11px;
+    background: #fff;
+    color: var(--text);
+    font: inherit;
+    font-size: 15px;
+    outline: none;
+}
+
+.inquiry-group input:focus,
+.inquiry-group select:focus,
+.inquiry-group textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(197,155,39,.12);
+}
+
+.inquiry-group textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.inquiry-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.inquiry-buttons button {
+    min-height: 52px;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.inquiry-whatsapp {
+    background: #16b957;
+}
+
+.inquiry-gmail {
+    background: var(--maroon);
+}
+
+/* TABLET */
+@media(max-width:899px) {
+    .inquiry-panel {
+        max-width: 100%;
+    }
+}
+
+/* MOBILE */
+@media(max-width:600px) {
+    .inquiry-panel {
+        padding: 20px;
+    }
+
+    .inquiry-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .inquiry-buttons button {
+        width: 100%;
+    }
+}
+
+/* SMALL MOBILE */
+@media(max-width:360px) {
+    .inquiry-panel {
+        padding: 14px;
+    }
+
+    .inquiry-heading h3 {
+        font-size: 21px;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- =========================================================
+     3D BACKGROUND
+========================================================= -->
+
+<canvas
+  id="canvas3d"
+  aria-hidden="true">
+</canvas>
+
+
+<!-- =========================================================
+     TOP BAR
+========================================================= -->
+
+<div class="topbar">
+
+  <div class="container topin">
+
+    <div>
+
+      <a href="tel:+918948517532">
+        <i class="fa-solid fa-phone"></i>
+        +91 8948517532
+      </a>
+
+    </div>
+
+    <div>
+
+      <span>
+        <i class="fa-solid fa-location-dot"></i>
+        Fazilnagar Kushinagar, Uttar Pradesh
+      </span>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+  <div class="container nav">
+
+    <a
+      class="brand"
+      href="#home"
+      aria-label="SUBITA INFRATECH Home">
+
+      <img
+        class="brand-logo"
+        src="logo.png"
+        alt="SUBITA INFRATECH Logo"
+        width="50"
+        height="50">
+
+      <div>
+        <strong>SUBITA INFRATECH</strong>
+      </div>
+
+    </a>
+
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Menu खोलें"
+      aria-expanded="false">
+
+      <i class="fa-solid fa-ellipsis-vertical"></i>
+
+    </button>
+
+
+    <nav
+      aria-label="Main Navigation"
+      id="mobileNav">
+
+      <ul>
+
+        <li>
+          <a href="#home">
+            <i class="fa-solid fa-house"></i>
+            होम
+          </a>
+        </li>
+
+        <li>
+          <a href="#about">
+            <i class="fa-solid fa-building"></i>
+            हमारे बारे में
+          </a>
+        </li>
+
+        <li>
+          <a href="#services">
+            <i class="fa-solid fa-gears"></i>
+            सेवाएँ
+          </a>
+        </li>
+
+        <li
+          class="more"
+          id="more">
+
+          <a
+            href="#"
+            class="more-btn"
+            id="moreBtn">
+
+            <i class="fa-solid fa-layer-group"></i>
+
+            और देखें
+
+            <i
+              class="fa-solid fa-chevron-down"
+              style="margin-left:auto;">
+            </i>
+
+          </a>
+
+
+          <div class="more-menu">
+
+            <a href="#process">
+              <i class="fa-solid fa-list-check"></i>
+              प्रक्रिया
+            </a>
+
+            <a href="#why-us">
+              <i class="fa-solid fa-circle-check"></i>
+              हमें क्यों चुनें?
+            </a>
+
+            <a href="#owners">
+              <i class="fa-solid fa-users"></i>
+              हमारी टीम
+            </a>
+
+            <a href="#contact">
+              <i class="fa-solid fa-phone"></i>
+              संपर्क करें
+            </a>
+
+          </div>
+
+        </li>
+
+      </ul>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section
+  class="hero"
+  id="home">
+
+  <div class="container hero-grid">
+
+    <div class="reveal-3d">
+
+      <div class="eyebrow">
+
+        <i class="fa-solid fa-helmet-safety"></i>
+
+        Construction & Infrastructure
+
+      </div>
+
+
+      <h1>
+        मजबूत निर्माण,
+        <span>भरोसेमंद पहचान।</span>
+      </h1>
+
+
+      <p>
+        SUBITA INFRATECH आपके सपनों के निर्माण को
+        गुणवत्ता, पारदर्शिता और समयबद्ध कार्य के साथ
+        वास्तविकता में बदलने के लिए प्रतिबद्ध है।
+      </p>
+
+
+      <div class="actions">
+
+        <a
+          class="btn primary"
+          href="#contact">
+
+          प्रोजेक्ट पर चर्चा करें
+
+          <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+
+        <a
+          class="btn secondary"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://wa.me/918948517532?text=Namaste%20SUBITA%20INFRATECH%2C%20mujhe%20construction%20project%20ke%20baare%20mein%20jaankari%20chahiye.">
+
+          <i
+            class="fa-brands fa-whatsapp"
+            style="color:#25d366;">
+          </i>
+
+          WhatsApp करें
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div
+      class="hero-card reveal-3d tilt-card">
+
+      <img
+        src="logo.png"
+        alt="SUBITA INFRATECH Logo"
+        width="85"
+        height="85"
+        style="
+          width:85px;
+          height:85px;
+          object-fit:contain;
+          border-radius:50%;
+          margin-bottom:20px;
+          border:2px solid var(--maroon);
+          padding:3px;
+          background:#fff;
+          box-shadow:var(--shadow-sm);
+        ">
+
+
+      <h3
+        style="
+          color:var(--maroon-dark);
+          font-size:22px;
+          margin-bottom:10px;
+          font-weight:800;
+        ">
+
+        विश्वास के साथ निर्माण
+
+      </h3>
+
+
+      <p
+        style="
+          color:var(--muted);
+          font-size:15px;
+          margin:0;
+        ">
+
+        Residential, Commercial, Civil और Infrastructure
+        projects के लिए professional construction solutions।
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     TRUST
+========================================================= -->
+
+<div class="trust">
+
+  <div class="container trust-grid">
+
+    <div class="trust-item">
+      <i class="fa-solid fa-shield-halved"></i>
+      <strong>100% पारदर्शिता</strong>
+      <span>स्पष्ट कार्य प्रक्रिया</span>
+    </div>
+
+    <div class="trust-item">
+      <i class="fa-solid fa-clock"></i>
+      <strong>समयबद्ध डिलीवरी</strong>
+      <span>समय का सम्मान</span>
+    </div>
+
+    <div class="trust-item">
+      <i class="fa-solid fa-user-gear"></i>
+      <strong>अनुभवी टीम</strong>
+      <span>कुशल professionals</span>
+    </div>
+
+    <div class="trust-item">
+      <i class="fa-solid fa-building"></i>
+      <strong>गुणवत्तापूर्ण निर्माण</strong>
+      <span>मजबूत और टिकाऊ काम</span>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section
+  id="about"
+  class="bg-alt">
+
+  <div class="container">
+
+    <div class="head reveal-3d">
+
+      <div class="eyebrow">
+        हमारे बारे में
+      </div>
+
+      <h2>
+        निर्माण में गुणवत्ता और विश्वास
+      </h2>
+
+      <p>
+        हमारा उद्देश्य केवल निर्माण करना नहीं,
+        बल्कि लंबे समय तक टिकने वाली मजबूत पहचान बनाना है।
+      </p>
+
+    </div>
+
+
+    <div class="about">
+
+      <div class="reveal-3d">
+
+        <h3>
+          SUBITA INFRATECH
+        </h3>
+
+        <p>
+          हम residential, commercial, civil और infrastructure
+          construction के क्षेत्र में भरोसेमंद समाधान प्रदान
+          करने के लिए प्रतिबद्ध हैं।
+        </p>
+
+        <p>
+          हर project में planning, quality, transparency
+          और timely execution को प्राथमिकता दी जाती है।
+        </p>
+
+
+        <div class="points">
+
+          <div>
+            <i class="fa-solid fa-circle-check"></i>
+            <span>
+              पारदर्शी कार्य प्रक्रिया और स्पष्ट जानकारी।
+            </span>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-circle-check"></i>
+            <span>
+              गुणवत्तापूर्ण सामग्री और बेहतर निर्माण मानक।
+            </span>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-circle-check"></i>
+            <span>
+              ग्राहक की आवश्यकता के अनुसार समाधान।
+            </span>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-circle-check"></i>
+            <span>
+              समय और बजट का बेहतर प्रबंधन।
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="stats reveal-3d">
+
+        <div class="stat tilt-card">
+          <strong>100%</strong>
+          <span>पारदर्शी कार्य प्रणाली</span>
+        </div>
+
+        <div class="stat tilt-card">
+          <strong>24×7</strong>
+          <span>Contact Support</span>
+        </div>
+
+        <div class="stat tilt-card">
+          <strong>5+</strong>
+          <span>मुख्य निर्माण क्षेत्र</span>
+        </div>
+
+        <div class="stat tilt-card">
+          <strong>विश्वास</strong>
+          <span>भरोसेमंद निर्माण साझेदार</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     SERVICES
+========================================================= -->
+
+<section id="services">
+
+  <div class="container">
+
+    <div class="head reveal-3d">
+
+      <div class="eyebrow">
+        हमारी सेवाएँ
+      </div>
+
+      <h2>
+        Construction Solutions
+      </h2>
+
+      <p>
+        आपके project की आवश्यकता के अनुसार
+        professional और practical construction solutions।
+      </p>
+
+    </div>
+
+
+    <div class="cards">
+
+      <article class="card tilt-card reveal-3d">
+
+        <div class="icon">
+          <i class="fa-solid fa-house"></i>
+        </div>
+
+        <h3>
+          Residential Construction
+        </h3>
+
+        <p>
+          घर, villa और residential projects के लिए
+          मजबूत एवं गुणवत्तापूर्ण निर्माण।
+        </p>
+
+      </article>
+
+
+      <article class="card tilt-card reveal-3d">
+
+        <div class="icon">
+          <i class="fa-solid fa-building"></i>
+        </div>
+
+        <h3>
+          Commercial Construction
+        </h3>
+
+        <p>
+          दुकान, office और commercial spaces के लिए
+          professional construction solutions।
+        </p>
+
+      </article>
+
+
+      <article class="card tilt-card reveal-3d">
+
+        <div class="icon">
+          <i class="fa-solid fa-road"></i>
+        </div>
+
+        <h3>
+          Road & Civil Works
+        </h3>
+
+        <p>
+          Road, drainage और अन्य civil infrastructure
+          projects के लिए construction services।
+        </p>
+
+      </article>
+
+
+      <article class="card tilt-card reveal-3d">
+
+        <div class="icon">
+          <i class="fa-solid fa-helmet-safety"></i>
+        </div>
+
+        <h3>
+          Project Execution
+        </h3>
+
+        <p>
+          Planning से execution तक project management
+          और site coordination।
+        </p>
+
+      </article>
+
+
+      <article class="card tilt-card reveal-3d">
+
+        <div class="icon">
+          <i class="fa-solid fa-ruler-combined"></i>
+        </div>
+
+        <h3>
+          Planning & Estimation
+        </h3>
+
+        <p>
+          Project requirements के अनुसार planning,
+          estimation और execution guidance।
+        </p>
+
+      </article>
+
+
+      <article class="card tilt-card reveal-3d">
+
+        <div class="icon">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+        </div>
+
+        <h3>
+          Renovation & Development
+        </h3>
+
+        <p>
+          Existing properties के renovation,
+          improvement और development solutions।
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROCESS
+========================================================= -->
+
+<section
+  id="process"
+  class="bg-alt">
+
+  <div class="container">
+
+    <div class="head reveal-3d">
+
+      <div class="eyebrow">
+        हमारी प्रक्रिया
+      </div>
+
+      <h2>
+        काम कैसे शुरू होता है?
+      </h2>
+
+      <p>
+        एक स्पष्ट और व्यवस्थित process के साथ
+        आपके project को आगे बढ़ाया जाता है।
+      </p>
+
+    </div>
+
+
+    <div class="process-grid">
+
+      <div class="process tilt-card reveal-3d">
+        <div class="num">01</div>
+        <h3>Discussion</h3>
+        <p>
+          आपकी जरूरत और project requirement को समझना।
+        </p>
+      </div>
+
+      <div class="process tilt-card reveal-3d">
+        <div class="num">02</div>
+        <h3>Planning</h3>
+        <p>
+          Scope, budget और execution plan तैयार करना।
+        </p>
+      </div>
+
+      <div class="process tilt-card reveal-3d">
+        <div class="num">03</div>
+        <h3>Execution</h3>
+        <p>
+          Professional team के साथ construction शुरू करना।
+        </p>
+      </div>
+
+      <div class="process tilt-card reveal-3d">
+        <div class="num">04</div>
+        <h3>Delivery</h3>
+        <p>
+          Quality checking के बाद project handover करना।
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     WHY US
+========================================================= -->
+
+<section id="why-us">
+
+  <div class="container">
+
+    <div class="head reveal-3d">
+
+      <div class="eyebrow">
+        हमें क्यों चुनें?
+      </div>
+
+      <h2>
+        भरोसा, गुणवत्ता और जिम्मेदारी
+      </h2>
+
+      <p>
+        हर project में बेहतर अनुभव और मजबूत परिणाम
+        देने की हमारी कोशिश रहती है।
+      </p>
+
+    </div>
+
+
+    <div class="why">
+
+      <div class="why-card tilt-card reveal-3d">
+
+        <i class="fa-solid fa-handshake"></i>
+
+        <h3>
+          भरोसेमंद काम
+        </h3>
+
+        <p>
+          स्पष्ट जानकारी और पारदर्शी तरीके से काम।
+        </p>
+
+      </div>
+
+
+      <div class="why-card tilt-card reveal-3d">
+
+        <i class="fa-solid fa-clock"></i>
+
+        <h3>
+          समय की प्राथमिकता
+        </h3>
+
+        <p>
+          तय schedule के अनुसार project execution।
+        </p>
+
+      </div>
+
+
+      <div class="why-card tilt-card reveal-3d">
+
+        <i class="fa-solid fa-user-tie"></i>
+
+        <h3>
+          अनुभवी टीम
+        </h3>
+
+        <p>
+          Skilled professionals और बेहतर site management।
+        </p>
+
+      </div>
+
+
+      <div class="why-card tilt-card reveal-3d">
+
+        <i class="fa-solid fa-gem"></i>
+
+        <h3>
+          टिकाऊ निर्माण
+        </h3>
+
+        <p>
+          Quality और durability को प्राथमिकता।
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     TEAM / LEADERSHIP
+========================================================= -->
+
+<section id="owners" class="bg-alt">
+
+  <div class="container">
+
+    <div class="head reveal-3d">
+
+      <div class="eyebrow">
+        LEADERSHIP
+      </div>
+
+      <h2>हमारी टीम</h2>
+
+      <p>
+        SUBITA INFRATECH को आगे बढ़ाने वाली
+        leadership team।
+      </p>
+
+    </div>
+
+    <div class="owners">
+
+      <!-- ANKIT SINGH -->
+
+      <div class="owner tilt-card reveal-3d">
+
+        <div class="avatar">
+          <img
+            src="ankit.webp"
+            alt="Er.Ankit Singh - Founder"
+            loading="lazy">
+        </div>
+
+        <div class="owner-info">
+
+          <h3>Er. ANKIT SINGH</h3>
+
+          <p>(Founder)</p>
+
+        </div>
+
+      </div>
+
+
+      <!-- NITIN SINGH -->
+
+      <div class="owner tilt-card reveal-3d">
+
+        <div class="avatar">
+          <img
+            src="nitin.webp"
+            alt="Nitin Singh - Founder"
+            loading="lazy">
+        </div>
+
+        <div class="owner-info">
+
+          <h3>NITIN SINGH</h3>
+
+          <p>(Founder)</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section
+  class="contact"
+  id="contact">
+
+  <div class="container contact-grid">
+
+    <div class="reveal-3d">
+
+      <div class="eyebrow">
+        संपर्क करें
+      </div>
+
+      <h2>
+        अपने project पर बात करें।
+      </h2>
+
+      <p>
+        अपने construction project की जरूरत हमें बताइए।
+        हमारी team आपसे संपर्क करके आगे की जानकारी देगी।
+      </p>
+
+
+      <div class="contact-list">
+
+        <a href="tel:+918948517532">
+
+          <i class="fa-solid fa-phone"></i>
+
+          <span>
+            +91 8948517532
+          </span>
+
+        </a>
+
+
+        <a href="mailto:subitainfratech@gmail.com">
+
+          <i class="fa-solid fa-envelope"></i>
+
+          <span>
+            subitainfratech@gmail.com
+          </span>
+
+        </a>
+
+
+        <div>
+
+          <i class="fa-solid fa-location-dot"></i>
+
+          <span>
+            Fazilnagar, Kushinagar, Uttar Pradesh, India
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="social">
+
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.facebook.com/subitainfratech/"
+          aria-label="Facebook">
+
+          <i class="fa-brands fa-facebook-f"></i>
+
+        </a>
+
+
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.instagram.com/subitainfratech/"
+          aria-label="Instagram">
+
+          <i class="fa-brands fa-instagram"></i>
+
+        </a>
+
+
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.youtube.com/@subitainfratech"
+          aria-label="YouTube">
+
+          <i class="fa-brands fa-youtube"></i>
+
+        </a>
+
+
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://wa.me/918948517532?text=Namaste%20SUBITA%20INFRATECH%2C%20mujhe%20construction%20project%20ke%20baare%20mein%20jaankari%20chahiye."
+          aria-label="WhatsApp">
+
+          <i class="fa-brands fa-whatsapp"></i>
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="inquiry-panel tilt-card reveal-3d">
+
+    <div class="inquiry-heading">
+        <span class="inquiry-icon">
+            <i class="fa-solid fa-envelope"></i>
+        </span>
+        <h3>Project Inquiry Form</h3>
+        <p>अपने प्रोजेक्ट की जानकारी हमें भेजें।</p>
+    </div>
+
+    <form id="inquiryForm">
+
+        <div class="inquiry-group">
+            <input type="text" id="inqName"
+            placeholder="आपका नाम *" required>
+        </div>
+
+        <div class="inquiry-group">
+            <input type="tel" id="inqPhone"
+            placeholder="मोबाइल नंबर *"
+            pattern="[0-9+\s()-]{8,15}" required>
+        </div>
+
+        <div class="inquiry-group">
+            <input type="email" id="inqEmail"
+            placeholder="ईमेल एड्रेस *" required>
+        </div>
+
+        <div class="inquiry-group">
+            <select id="inqService" required>
+                <option value="">सेवा चुनें *</option>
+                <option>Residential Construction</option>
+                <option>Commercial Construction</option>
+                <option>Civil Work</option>
+                <option>Renovation</option>
+                <option>Infrastructure Work</option>
+                <option>Other</option>
+            </select>
+        </div>
+
+        <div class="inquiry-group">
+            <textarea id="inqMessage"
+            placeholder="प्रोजेक्ट की जानकारी लिखें *"
+            rows="4" required></textarea>
+        </div>
+
+        <div class="inquiry-buttons">
+
+            <button type="button"
+            class="inquiry-whatsapp"
+            onclick="sendInquiryWhatsApp()">
+                <i class="fa-brands fa-whatsapp"></i>
+                WhatsApp पर भेजें
+            </button>
+
+            <button type="button"
+            class="inquiry-gmail"
+            onclick="sendInquiryEmail()">
+                <i class="fa-solid fa-envelope"></i>
+                Gmail से भेजें
+            </button>
+
+        </div>
+
+    </form>
+</div>
+ </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="foot">
+
+      <div>
+
+        <a
+          class="brand"
+          href="#home"
+          style="display:inline-flex;">
+
+          <img
+            class="brand-logo"
+            src="logo.png"
+            alt="SUBITA INFRATECH Logo"
+            width="50"
+            height="50">
+
+          <div>
+
+            <strong style="color:#fff;">
+              SUBITA INFRATECH
+            </strong>
+
+          </div>
+
+        </a>
+
+
+        <p
+          style="
+            font-size:14px;
+            margin-top:16px;
+            color:#94a3b8;
+            line-height:1.6;
+          ">
+
+          Construction, Infrastructure और Civil Engineering
+          solutions के लिए आपका भरोसेमंद partner।
+
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Quick Links
+        </h4>
+
+        <div class="links">
+
+          <a href="#about">
+            हमारे बारे में
+          </a>
+
+          <a href="#services">
+            सेवाएँ
+          </a>
+
+          <a href="#process">
+            प्रक्रिया
+          </a>
+
+          <a href="#why-us">
+            हमें क्यों चुनें?
+          </a>
+
+          <a href="#owners">
+            हमारी टीम
+          </a>
+
+          <a href="#contact">
+            संपर्क
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Contact
+        </h4>
+
+        <div class="links">
+
+          <a href="tel:+918948517532">
+            +91 8948517532
+          </a>
+
+          <a href="mailto:subitainfratech@gmail.com">
+            Email-subitainfratech@gmail.com
+          </a>
+
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://wa.me/918948517532?text=Namaste%20SUBITA%20INFRATECH%2C%20mujhe%20construction%20project%20ke%20baare%20mein%20jaankari%20chahiye.">
+
+            WhatsApp +918948517532
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="copy">
+
+      © <span id="year"></span>
+      SUBITA INFRATECH.
+      All Rights Reserved.
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- =========================================================
+     FLOATING BUTTONS
+========================================================= -->
+
+<div class="floating-side-stack">
+
+  <button
+    class="top"
+    id="top"
+    type="button"
+    aria-label="ऊपर जाएं">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+  </button>
+
+
+  <a
+    class="float"
+    target="_blank"
+    rel="noopener noreferrer"
+    href="https://wa.me/918948517532?text=Namaste%20SUBITA%20INFRATECH%2C%20mujhe%20construction%20project%20ke%20baare%20mein%20jaankari%20chahiye."
+    aria-label="WhatsApp पर संपर्क करें">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+  </a>
+
+</div>
+
+
+<!-- =========================================================
+     FINAL 3D + WEBSITE ENGINE
+========================================================= -->
+
+<script>
+
+(function(){
+
+"use strict";
+
+
+/* =========================================================
+   BASIC SETTINGS
+========================================================= */
+
+const canvas =
+  document.getElementById("canvas3d");
+
+const isMobile =
+  window.matchMedia(
+    "(max-width:600px)"
+  ).matches;
+
+const reduceMotion =
+  window.matchMedia(
+    "(prefers-reduced-motion:reduce)"
+  ).matches;
+
+
+/* =========================================================
+   3D ENGINE
+========================================================= */
+
+function start3D(){
+
+  if(
+    !canvas ||
+    typeof THREE === "undefined" ||
+    reduceMotion
+  ){
+    return;
+  }
+
+
+  let renderer;
+
+
+  /* -------------------------------------------------------
+     SAFE WEBGL
+  ------------------------------------------------------- */
+
+  try{
+
+    renderer =
+      new THREE.WebGLRenderer({
+
+        canvas:canvas,
+
+        alpha:true,
+
+        antialias:
+          !isMobile,
+
+        powerPreference:
+          "high-performance"
+
+      });
+
+  }catch(error){
+
+    console.warn(
+      "WebGL unavailable:",
+      error
+    );
+
+    canvas.style.display="none";
+
+    return;
+
+  }
+
+
+  renderer.setSize(
+    window.innerWidth,
+    window.innerHeight,
+    false
+  );
+
+
+  renderer.setPixelRatio(
+    Math.min(
+      window.devicePixelRatio || 1,
+      isMobile ? 1.25 : 1.6
+    )
+  );
+
+
+  renderer.setClearColor(
+    0xffffff,
+    0
+  );
+
+
+  /* =======================================================
+     SCENE
+  ======================================================= */
+
+  const scene =
+    new THREE.Scene();
+
+
+  const camera =
+    new THREE.PerspectiveCamera(
+      42,
+      window.innerWidth /
+      window.innerHeight,
+      .1,
+      200
+    );
+
+
+  camera.position.set(
+    0,
+    1,
+    28
+  );
+
+
+  /* =======================================================
+     WORLD
+  ======================================================= */
+
+  const world =
+    new THREE.Group();
+
+  scene.add(world);
+
+
+  const MAROON =
+    0x7a152d;
+
+  const MAROON_LIGHT =
+    0x9e1f3b;
+
+  const GOLD =
+    0xc59b27;
+
+  const GOLD_LIGHT =
+    0xd4a72c;
+
+
+  /* =======================================================
+     MATERIALS
+  ======================================================= */
+
+  const maroonLine =
+    new THREE.LineBasicMaterial({
+
+      color:MAROON,
+
+      transparent:true,
+
+      opacity:
+        isMobile ? .32 : .48
+
+    });
+
+
+  const lightMaroonLine =
+    new THREE.LineBasicMaterial({
+
+      color:MAROON_LIGHT,
+
+      transparent:true,
+
+      opacity:
+        isMobile ? .20 : .34
+
+    });
+
+
+  const goldLine =
+    new THREE.LineBasicMaterial({
+
+      color:GOLD,
+
+      transparent:true,
+
+      opacity:
+        isMobile ? .48 : .72
+
+    });
+
+
+  const goldSoftLine =
+    new THREE.LineBasicMaterial({
+
+      color:GOLD_LIGHT,
+
+      transparent:true,
+
+      opacity:
+        isMobile ? .25 : .42
+
+    });
+
+
+  /* =======================================================
+     CONSTRUCTION GROUP
+  ======================================================= */
+
+  const construction =
+    new THREE.Group();
+
+  world.add(
+    construction
+  );
+
+
+  /* =======================================================
+     BUILDING FUNCTION
+  ======================================================= */
+
+  function createBuilding(
+    x,
+    y,
+    z,
+    width,
+    height,
+    depth,
+    material
+  ){
+
+    const building =
+      new THREE.Group();
+
+
+    building.position.set(
+      x,
+      y,
+      z
+    );
+
+
+    /* Outer frame */
+
+    const box =
+      new THREE.BoxGeometry(
+        width,
+        height,
+        depth
+      );
+
+
+    const edges =
+      new THREE.EdgesGeometry(
+        box
+      );
+
+
+    const outline =
+      new THREE.LineSegments(
+        edges,
+        material
+      );
+
+
+    outline.position.y =
+      height/2;
+
+
+    building.add(
+      outline
+    );
+
+
+    /* Floors */
+
+    const floorStep =
+      Math.max(
+        1.1,
+        height/7
+      );
+
+
+    for(
+      let floor=floorStep;
+      floor<height;
+      floor+=floorStep
+    ){
+
+      const hw =
+        width/2;
+
+      const hd =
+        depth/2;
+
+
+      const geometry =
+        new THREE.BufferGeometry();
+
+
+      geometry.setAttribute(
+        "position",
+        new THREE.Float32BufferAttribute(
+          [
+
+            -hw,floor,-hd,
+             hw,floor,-hd,
+
+             hw,floor,-hd,
+             hw,floor,hd,
+
+             hw,floor,hd,
+            -hw,floor,hd,
+
+            -hw,floor,hd,
+            -hw,floor,-hd
+
+          ],
+          3
+        )
+      );
+
+
+      building.add(
+        new THREE.LineSegments(
+          geometry,
+          material
+        )
+      );
+
+    }
+
+
+    /* Vertical beams */
+
+    [
+      [-width/2,-depth/2],
+      [ width/2,-depth/2],
+      [ width/2, depth/2],
+      [-width/2, depth/2]
+
+    ].forEach(
+      function(pos){
+
+        const geometry =
+          new THREE.BufferGeometry();
+
+
+        geometry.setAttribute(
+          "position",
+          new THREE.Float32BufferAttribute(
+            [
+
+              pos[0],0,pos[1],
+              pos[0],height,pos[1]
+
+            ],
+            3
+          )
+        );
+
+
+        building.add(
+          new THREE.LineSegments(
+            geometry,
+            lightMaroonLine
+          )
+        );
+
+      }
+    );
+
+
+    /* Roof */
+
+    const roof =
+      new THREE.EdgesGeometry(
+        new THREE.BoxGeometry(
+          width*1.06,
+          .05,
+          depth*1.06
+        )
+      );
+
+
+    const roofLine =
+      new THREE.LineSegments(
+        roof,
+        goldSoftLine
+      );
+
+
+    roofLine.position.y =
+      height;
+
+
+    building.add(
+      roofLine
+    );
+
+
+    construction.add(
+      building
+    );
+
+
+    return building;
+
+  }
+
+
+  /* =======================================================
+     BUILDINGS
+  ======================================================= */
+
+  createBuilding(
+    -7,-4,-1,
+    3.1,8,2.7,
+    maroonLine
+  );
+
+
+  createBuilding(
+    -3.5,-4,-1.5,
+    2.5,5.5,2.3,
+    lightMaroonLine
+  );
+
+
+  createBuilding(
+    .2,-4,-1,
+    3.2,10,2.8,
+    goldLine
+  );
+
+
+  createBuilding(
+    3.9,-4,-.5,
+    2.7,6.5,2.4,
+    maroonLine
+  );
+
+
+  createBuilding(
+    7,-4,-1.5,
+    3.4,8.5,2.8,
+    goldSoftLine
+  );
+
+
+  /* =======================================================
+     CENTRAL TOWER
+  ======================================================= */
+
+  const tower =
+    new THREE.Group();
+
+
+  const towerHeight =
+    isMobile ? 8 : 12;
+
+  const towerWidth =
+    isMobile ? 3 : 4;
+
+
+  const towerEdges =
+    new THREE.EdgesGeometry(
+      new THREE.BoxGeometry(
+        towerWidth,
+        towerHeight,
+        towerWidth
+      )
+    );
+
+
+  const towerLines =
+    new THREE.LineSegments(
+      towerEdges,
+      goldLine
+    );
+
+
+  towerLines.position.y =
+    towerHeight/2;
+
+
+  tower.add(
+    towerLines
+  );
+
+
+  for(
+    let y=1;
+    y<towerHeight;
+    y+=1.15
+  ){
+
+    const s =
+      towerWidth/2;
+
+
+    const geometry =
+      new THREE.BufferGeometry();
+
+
+    geometry.setAttribute(
+      "position",
+      new THREE.Float32BufferAttribute(
+        [
+
+          -s,y,-s,
+           s,y,-s,
+
+           s,y,-s,
+           s,y,s,
+
+           s,y,s,
+          -s,y,s,
+
+          -s,y,s,
+          -s,y,-s
+
+        ],
+        3
+      )
+    );
+
+
+    tower.add(
+      new THREE.LineSegments(
+        geometry,
+        goldSoftLine
+      )
+    );
+
+  }
+
+
+  tower.position.set(
+    0,-4,1
+  );
+
+
+  construction.add(
+    tower
+  );
+
+
+  /* =======================================================
+     CRANE
+  ======================================================= */
+
+  const crane =
+    new THREE.Group();
+
+
+  function line(
+    points,
+    material
+  ){
+
+    const geometry =
+      new THREE.BufferGeometry();
+
+
+    geometry.setAttribute(
+      "position",
+      new THREE.Float32BufferAttribute(
+        points,
+        3
+      )
+    );
+
+
+    return new THREE.LineSegments(
+      geometry,
+      material
+    );
+
+  }
+
+
+  crane.add(
+    line(
+      [0,0,0, 0,10,0],
+      goldLine
+    )
+  );
+
+
+  crane.add(
+    line(
+      [0,9.4,0, 7,9.4,0],
+      goldLine
+    )
+  );
+
+
+  crane.add(
+    line(
+      [0,9.4,0, 5.5,7.5,0],
+      goldSoftLine
+    )
+  );
+
+
+  crane.add(
+    line(
+      [5.5,7.5,0, 5.5,2.5,0],
+      maroonLine
+    )
+  );
+
+
+  crane.position.set(
+    -7,-4,0
+  );
+
+
+  construction.add(
+    crane
+  );
+
+
+  /* =======================================================
+     GLOBE
+  ======================================================= */
+
+  const globe =
+    new THREE.Group();
+
+
+  const globeRadius =
+    isMobile ? 4.2 : 5.8;
+
+
+  const globeGeometry =
+    new THREE.SphereGeometry(
+      globeRadius,
+      isMobile ? 18 : 26,
+      isMobile ? 12 : 18
+    );
+
+
+  const globeWire =
+    new THREE.LineSegments(
+      new THREE.WireframeGeometry(
+        globeGeometry
+      ),
+      maroonLine
+    );
+
+
+  globe.add(
+    globeWire
+  );
+
+
+  /* =======================================================
+     ORBITS
+  ======================================================= */
+
+  function createOrbit(
+    rx,
+    ry,
+    rz,
+    scale
+  ){
+
+    const orbit =
+      new THREE.Mesh(
+
+        new THREE.TorusGeometry(
+          globeRadius*scale,
+          isMobile ? .035 : .055,
+          8,
+          96
+        ),
+
+        goldLine
+
+      );
+
+
+    orbit.rotation.x=rx;
+    orbit.rotation.y=ry;
+    orbit.rotation.z=rz;
+
+
+    globe.add(
+      orbit
+    );
+
+
+    return orbit;
+
+  }
+
+
+  const orbit1 =
+    createOrbit(
+      Math.PI/2,
+      0,
+      0,
+      1.04
+    );
+
+
+  const orbit2 =
+    createOrbit(
+      Math.PI/3,
+      Math.PI/5,
+      0,
+      1.05
+    );
+
+
+  const orbit3 =
+    createOrbit(
+      -Math.PI/4,
+      Math.PI/5,
+      Math.PI/5,
+      1.07
+    );
+
+
+  /* =======================================================
+     GLOBE NODES
+  ======================================================= */
+
+  const raw =
+    globeGeometry
+      .attributes
+      .position
+      .array;
+
+
+  const nodeData=[];
+
+
+  const step =
+    isMobile ? 6 : 3;
+
+
+  for(
+    let i=0;
+    i<raw.length;
+    i+=step
+  ){
+
+    nodeData.push(
+      raw[i],
+      raw[i+1],
+      raw[i+2]
+    );
+
+  }
+
+
+  const nodeGeometry =
+    new THREE.BufferGeometry();
+
+
+  nodeGeometry.setAttribute(
+    "position",
+    new THREE.Float32BufferAttribute(
+      nodeData,
+      3
+    )
+  );
+
+
+  const nodeMaterial =
+    new THREE.PointsMaterial({
+
+      color:GOLD_LIGHT,
+
+      size:
+        isMobile ? .11 : .17,
+
+      transparent:true,
+
+      opacity:
+        isMobile ? .65 : .9
+
+    });
+
+
+  globe.add(
+    new THREE.Points(
+      nodeGeometry,
+      nodeMaterial
+    )
+  );
+
+
+  /* =======================================================
+     PARTICLES
+  ======================================================= */
+
+  const particleCount =
+    isMobile ? 70 : 150;
+
+
+  const particlePositions =
+    new Float32Array(
+      particleCount*3
+    );
+
+
+  for(
+    let i=0;
+    i<particleCount;
+    i++
+  ){
+
+    particlePositions[i*3] =
+      (Math.random()-.5)*35;
+
+    particlePositions[i*3+1] =
+      (Math.random()-.5)*24;
+
+    particlePositions[i*3+2] =
+      (Math.random()-.5)*20;
+
+  }
+
+
+  const particleGeometry =
+    new THREE.BufferGeometry();
+
+
+  particleGeometry.setAttribute(
+    "position",
+    new THREE.BufferAttribute(
+      particlePositions,
+      3
+    )
+  );
+
+
+  const particles =
+    new THREE.Points(
+
+      particleGeometry,
+
+      new THREE.PointsMaterial({
+
+        color:MAROON_LIGHT,
+
+        size:
+          isMobile ? .055 : .085,
+
+        transparent:true,
+
+        opacity:
+          isMobile ? .25 : .40
+
+      })
+
+    );
+
+
+  scene.add(
+    particles
+  );
+
+
+  /* Gold particles */
+
+  const goldParticles =
+    new THREE.Points(
+
+      particleGeometry.clone(),
+
+      new THREE.PointsMaterial({
+
+        color:GOLD,
+
+        size:
+          isMobile ? .035 : .06,
+
+        transparent:true,
+
+        opacity:
+          isMobile ? .35 : .55
+
+      })
+
+    );
+
+
+  scene.add(
+    goldParticles
+  );
+
+
+  /* =======================================================
+     POSITION
+  ======================================================= */
+
+  function positionScene(){
+
+    if(
+      window.innerWidth<=600
+    ){
+
+      globe.position.set(
+        0,
+        1.2,
+        -4
+      );
+
+
+      construction.visible=false;
+
+
+      camera.position.set(
+        0,
+        1,
+        20
+      );
+
+    }else{
+
+      globe.position.set(
+        7.5,
+        1,
+        -3
+      );
+
+
+      construction.visible=true;
+
+
+      camera.position.set(
+        0,
+        1,
+        28
+      );
+
+    }
+
+  }
+
+
+  positionScene();
+
+
+  scene.add(
+    globe
+  );
+
+
+  /* =======================================================
+     ANIMATION
+  ======================================================= */
+
+  let running=true;
+
+
+  function animate(){
+
+    if(!running)
+      return;
+
+
+    requestAnimationFrame(
+      animate
+    );
+
+
+    const time =
+      performance.now()*.001;
+
+
+    /* Globe */
+
+    globe.rotation.y +=
+      isMobile ? .0018 : .0026;
+
+
+    globe.rotation.x =
+      Math.sin(time*.25)*.035;
+
+
+    /* Rings */
+
+    orbit1.rotation.z+=.0015;
+    orbit2.rotation.z-=.0012;
+    orbit3.rotation.y+=.001;
+
+
+    /* Buildings */
+
+    construction.rotation.y =
+      Math.sin(time*.12)*.035;
+
+
+    construction.position.y =
+      Math.sin(time*.55)*.08;
+
+
+    /* Crane */
+
+    crane.rotation.y =
+      Math.sin(time*.18)*.08;
+
+
+    /* Particles */
+
+    particles.rotation.y+=.00025;
+
+    particles.rotation.x =
+      Math.sin(time*.08)*.02;
+
+
+    goldParticles.rotation.y-=.00018;
+
+
+    /* Camera */
+
+    camera.position.x =
+      Math.sin(time*.12)*
+      (isMobile ? .12 : .28);
+
+
+    camera.lookAt(
+      0,
+      0,
+      -2
+    );
+
+
+    renderer.render(
+      scene,
+      camera
+    );
+
+  }
+
+
+  animate();
+
+
+  /* =======================================================
+     RESIZE
+  ======================================================= */
+
+  let resizeTimer;
+
+
+  window.addEventListener(
+    "resize",
+    function(){
+
+      clearTimeout(
+        resizeTimer
+      );
+
+
+      resizeTimer =
+        setTimeout(
+          function(){
+
+            camera.aspect =
+              window.innerWidth /
+              window.innerHeight;
+
+
+            camera.updateProjectionMatrix();
+
+
+            renderer.setSize(
+              window.innerWidth,
+              window.innerHeight,
+              false
+            );
+
+
+            renderer.setPixelRatio(
+              Math.min(
+                window.devicePixelRatio || 1,
+                window.innerWidth<=600
+                  ? 1.25
+                  : 1.6
+              )
+            );
+
+
+            positionScene();
+
+          },
+          120
+        );
+
+    },
+    {
+      passive:true
+    }
+  );
+
+
+  /* =======================================================
+     PAUSE WHEN TAB HIDDEN
+  ======================================================= */
+
+  document.addEventListener(
+    "visibilitychange",
+    function(){
+
+      if(document.hidden){
+
+        running=false;
+
+      }else{
+
+        if(!running){
+
+          running=true;
+
+          animate();
+
+        }
+
+      }
+
+    }
+  );
+
+}
+
+
+/* =========================================================
+   START 3D SAFELY
+========================================================= */
+
+try{
+
+  start3D();
+
+}catch(error){
+
+  console.warn(
+    "3D animation error:",
+    error
+  );
+
+
+  if(canvas){
+
+    canvas.style.display="none";
+
+  }
+
+}
+
+
+/* =========================================================
+   CARD TILT
+========================================================= */
+
+if(
+  window.matchMedia(
+    "(hover:hover) and (pointer:fine)"
+  ).matches
+){
+
+  document
+    .querySelectorAll(".tilt-card")
+    .forEach(
+      function(card){
+
+        let frame=null;
+
+
+        card.addEventListener(
+          "mousemove",
+          function(e){
+
+            if(frame){
+
+              cancelAnimationFrame(
+                frame
+              );
+
+            }
+
+
+            frame =
+              requestAnimationFrame(
+                function(){
+
+                  const rect =
+                    card.getBoundingClientRect();
+
+
+                  const x =
+                    e.clientX -
+                    rect.left;
+
+
+                  const y =
+                    e.clientY -
+                    rect.top;
+
+
+                  const centerX =
+                    rect.width/2;
+
+
+                  const centerY =
+                    rect.height/2;
+
+
+                  const rotateX =
+                    ((y-centerY)/
+                    centerY)*-4;
+
+
+                  const rotateY =
+                    ((x-centerX)/
+                    centerX)*4;
+
+
+                  card.style.transform =
+                    `perspective(1000px)
+                     rotateX(${rotateX}deg)
+                     rotateY(${rotateY}deg)
+                     translateZ(5px)`;
+
+                }
+              );
+
+          }
+        );
+
+
+        card.addEventListener(
+          "mouseleave",
+          function(){
+
+            if(frame){
+
+              cancelAnimationFrame(
+                frame
+              );
+
+            }
+
+
+            card.style.transform =
+              "perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0)";
+
+          }
+        );
+
+      }
+    );
+
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealElements =
+  document.querySelectorAll(
+    ".reveal-3d"
+  );
+
+
+if(
+  "IntersectionObserver"
+  in window
+){
+
+  const observer =
+    new IntersectionObserver(
+      function(entries){
+
+        entries.forEach(
+          function(entry){
+
+            if(
+              entry.isIntersecting
+            ){
+
+              entry.target
+                .classList
+                .add("active");
+
+
+              observer.unobserve(
+                entry.target
+              );
+
+            }
+
+          }
+        );
+
+      },
+      {
+        threshold:.10,
+        rootMargin:
+          "0px 0px -40px 0px"
+      }
+    );
+
+
+  revealElements.forEach(
+    function(element){
+
+      observer.observe(
+        element
+      );
+
+    }
+  );
+
+}else{
+
+  revealElements.forEach(
+    function(element){
+
+      element.classList.add(
+        "active"
+      );
+
+    }
+  );
+
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuToggle =
+  document.getElementById(
+    "menuToggle"
+  );
+
+
+const mobileNav =
+  document.getElementById(
+    "mobileNav"
+  );
+
+
+const more =
+  document.getElementById(
+    "more"
+  );
+
+
+const moreBtn =
+  document.getElementById(
+    "moreBtn"
+  );
+
+
+function closeMenu(){
+
+  if(!mobileNav)
+    return;
+
+
+  mobileNav.classList.remove(
+    "open"
+  );
+
+
+  document.body.classList.remove(
+    "menu-open"
+  );
+
+
+  if(menuToggle){
+
+    menuToggle.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+
+
+    menuToggle.innerHTML =
+      '<i class="fa-solid fa-ellipsis-vertical"></i>';
+
+  }
+
+}
+
+
+if(
+  menuToggle &&
+  mobileNav
+){
+
+  menuToggle.addEventListener(
+    "click",
+    function(e){
+
+      e.stopPropagation();
+
+
+      const open =
+        mobileNav.classList.toggle(
+          "open"
+        );
+
+
+      document.body.classList.toggle(
+        "menu-open",
+        open
+      );
+
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(open)
+      );
+
+
+      menuToggle.innerHTML =
+        open
+          ? '<i class="fa-solid fa-xmark"></i>'
+          : '<i class="fa-solid fa-ellipsis-vertical"></i>';
+
+    }
+  );
+
+}
+
+
+/* =========================================================
+   MORE MENU
+========================================================= */
+
+if(
+  moreBtn &&
+  more
+){
+
+  moreBtn.addEventListener(
+    "click",
+    function(e){
+
+      e.preventDefault();
+      e.stopPropagation();
+
+
+      more.classList.toggle(
+        "open"
+      );
+
+    }
+  );
+
+}
+
+
+/* =========================================================
+   NAV LINKS
+========================================================= */
+
+document
+  .querySelectorAll(
+    "#mobileNav a:not(.more-btn)"
+  )
+  .forEach(
+    function(link){
+
+      link.addEventListener(
+        "click",
+        function(){
+
+          if(more){
+
+            more.classList.remove(
+              "open"
+            );
+
+          }
+
+
+          closeMenu();
+
+        }
+      );
+
+    }
+  );
+
+
+/* =========================================================
+   OUTSIDE CLICK
+========================================================= */
+
+document.addEventListener(
+  "click",
+  function(e){
+
+    if(
+      mobileNav &&
+      menuToggle &&
+      !mobileNav.contains(e.target) &&
+      !menuToggle.contains(e.target)
+    ){
+
+      if(more){
+
+        more.classList.remove(
+          "open"
+        );
+
+      }
+
+
+      closeMenu();
+
+    }
+
+  }
+);
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+const topButton =
+  document.getElementById(
+    "top"
+  );
+
+
+function updateTopButton(){
+
+  if(!topButton)
+    return;
+
+
+  topButton.classList.toggle(
+    "show",
+    window.scrollY>450
+  );
+
+}
+
+
+window.addEventListener(
+  "scroll",
+  updateTopButton,
+  {
+    passive:true
+  }
+);
+
+
+if(topButton){
+
+  topButton.addEventListener(
+    "click",
+    function(){
+
+      window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+      });
+
+    }
+  );
+
+}
+
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+const year =
+  document.getElementById(
+    "year"
+  );
+
+
+if(year){
+
+  year.textContent =
+    new Date().getFullYear();
+
+}
+
+
+/* =========================================================
+   INITIAL
+========================================================= */
+
+updateTopButton();
+
+
+})();
+</script>
+<script>
+      
+function getInquiryData() {
+
+    const form = document.getElementById("inquiryForm");
+
+    if (!form.reportValidity()) return null;
+
+    return {
+        name: document.getElementById("inqName").value.trim(),
+        phone: document.getElementById("inqPhone").value.trim(),
+        email: document.getElementById("inqEmail").value.trim(),
+        service: document.getElementById("inqService").value,
+        message: document.getElementById("inqMessage").value.trim()
+    };
+}
+
+function sendInquiryWhatsApp() {
+
+    const d = getInquiryData();
+    if (!d) return;
+
+    const message =
+`SUBITA INFRATECH - New Inquiry
+
+Name: ${d.name}
+Mobile: ${d.phone}
+Email: ${d.email}
+Service: ${d.service}
+
+Project Details:
+${d.message}`;
+
+    window.open(
+        "https://wa.me/918948517532?text=" +
+        encodeURIComponent(message),
+        "_blank"
+    );
+}
+
+function sendInquiryEmail() {
+
+    const d = getInquiryData();
+    if (!d) return;
+
+    const subject = "New Project Inquiry - SUBITA INFRATECH";
+
+    const body =
+`Name: ${d.name}
+Mobile: ${d.phone}
+Email: ${d.email}
+Service: ${d.service}
+
+Project Details:
+${d.message}`;
+
+    const mailto =
+        "mailto:subitainfratech@gmail.com" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+
+    window.location.href = mailto;
+}
+</script>
+      
+</body>
+</html>
