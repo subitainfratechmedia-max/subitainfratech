@@ -1001,6 +1001,353 @@ section{
 }
 
 
+
+
+/* =========================================
+   SUBITA INFRATECH - PREMIUM GALLERY ALBUM
+========================================= */
+
+.gallery-album-section {
+  width: 100%;
+  max-width: 1180px;
+  margin: 45px auto;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.gallery-album-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #4d0a1a, #7a152d, #260610);
+  color: #fff;
+  box-shadow: 0 18px 45px rgba(77, 10, 26, .22);
+  border: 1px solid rgba(197, 155, 39, .45);
+}
+
+.gallery-cover {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+  opacity: .85;
+  transition: transform .6s ease;
+}
+
+.gallery-album-card:hover .gallery-cover {
+  transform: scale(1.035);
+}
+
+.gallery-cover-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(25, 0, 8, .05) 0%,
+    rgba(40, 0, 12, .45) 45%,
+    rgba(30, 0, 10, .96) 100%
+  );
+}
+
+.gallery-album-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px;
+  z-index: 2;
+}
+
+.gallery-eyebrow {
+  display: inline-block;
+  color: #f1cf75;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.gallery-album-content h2 {
+  font-size: clamp(25px, 4vw, 38px);
+  margin: 0 0 10px;
+  color: #fff;
+  font-weight: 800;
+}
+
+.gallery-album-content h3 {
+  color: #f4d37d;
+  font-size: 19px;
+  margin: 0 0 8px;
+}
+
+.gallery-album-content p {
+  color: rgba(255,255,255,.88);
+  margin: 0 0 20px;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.gallery-open-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 23px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #d4a72c, #b88616);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: .7px;
+  border: 1px solid rgba(255,255,255,.3);
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.gallery-open-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 25px rgba(212,167,44,.3);
+}
+
+/* GALLERY MODAL */
+
+.gallery-modal-v2 {
+  position: fixed;
+  inset: 0;
+  z-index: 99990;
+  background: rgba(12, 5, 8, .96);
+  display: none;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.gallery-modal-v2.active {
+  display: flex;
+}
+
+.gallery-modal-header {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  color: #fff;
+}
+
+.gallery-modal-header h2 {
+  margin: 0;
+  color: #f1cf75;
+  font-size: clamp(20px, 3vw, 28px);
+}
+
+.gallery-modal-header p {
+  margin: 6px 0 0;
+  color: #ddd;
+  font-size: 13px;
+}
+
+.gallery-close-btn {
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 50%;
+  color: #fff;
+  background: #7a152d;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.gallery-grid-v2 {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.gallery-item-v2 {
+  padding: 0;
+  border: 2px solid rgba(212,167,44,.3);
+  background: #250711;
+  border-radius: 13px;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 4 / 3;
+  position: relative;
+}
+
+.gallery-item-v2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s ease;
+}
+
+.gallery-item-v2:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-photo-number {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0,0,0,.7);
+  color: #fff;
+  font-size: 11px;
+  padding: 5px 9px;
+  border-radius: 20px;
+}
+
+/* FULL IMAGE VIEWER */
+
+.gallery-viewer-v2 {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: rgba(0,0,0,.97);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 65px 65px 35px;
+  box-sizing: border-box;
+}
+
+.gallery-viewer-v2.active {
+  display: flex;
+}
+
+.gallery-viewer-v2 img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.gallery-viewer-close,
+.gallery-viewer-prev,
+.gallery-viewer-next {
+  position: absolute;
+  border: 1px solid rgba(255,255,255,.25);
+  color: #fff;
+  background: rgba(122,21,45,.9);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.gallery-viewer-close {
+  top: 15px;
+  right: 18px;
+}
+
+.gallery-viewer-prev {
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.gallery-viewer-next {
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.gallery-viewer-counter {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 13px;
+  background: rgba(0,0,0,.6);
+  padding: 8px 16px;
+  border-radius: 30px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .gallery-grid-v2 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-album-section {
+    padding: 10px;
+    margin: 25px auto;
+  }
+
+  .gallery-cover {
+    height: 290px;
+  }
+
+  .gallery-album-content {
+    padding: 19px;
+  }
+
+  .gallery-album-content p {
+    font-size: 12px;
+  }
+
+  .gallery-grid-v2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .gallery-modal-v2 {
+    padding: 13px;
+  }
+
+  .gallery-viewer-v2 {
+    padding: 65px 10px 45px;
+  }
+
+  .gallery-viewer-prev {
+    left: 5px;
+  }
+
+  .gallery-viewer-next {
+    right: 5px;
+  }
+
+  .gallery-viewer-v2 img {
+    max-height: 78vh;
+  }
+}
+
+@media (max-width: 360px) {
+  .gallery-cover {
+    height: 260px;
+  }
+
+  .gallery-album-content {
+    padding: 15px;
+  }
+
+  .gallery-open-btn {
+    padding: 0 17px;
+    font-size: 11px;
+  }
+}
+
+
+      
+      
 /* =========================================
    SUBITA INFRATECH - PREMIUM TEAM DESIGN
 ========================================= */
@@ -2198,10 +2545,13 @@ footer{
         Construction & Infrastructure
 
       </div>
-
-
+          
+          
       <h1>
         मजबूत निर्माण,
+      </h1>
+          
+      <h1>
         <span>भरोसेमंद पहचान।</span>
       </h1>
 
@@ -2288,7 +2638,7 @@ footer{
         ">
 
         Residential, Commercial, Civil और Infrastructure
-        projects के लिए professional construction solutions।
+        projects के लिए professional construction solutions
 
       </p>
 
@@ -2470,7 +2820,7 @@ footer{
 
       <p>
         आपके project की आवश्यकता के अनुसार
-        professional और practical construction solutions।
+        professional और practical construction solutions
       </p>
 
     </div>
@@ -2508,7 +2858,7 @@ footer{
 
         <p>
           दुकान, office और commercial spaces के लिए
-          professional construction solutions।
+          professional construction solutions
         </p>
 
       </article>
@@ -2526,7 +2876,7 @@ footer{
 
         <p>
           Road, drainage और अन्य civil infrastructure
-          projects के लिए construction services।
+          projects के लिए construction services
         </p>
 
       </article>
@@ -2544,7 +2894,7 @@ footer{
 
         <p>
           Planning से execution तक project management
-          और site coordination।
+          और site coordination
         </p>
 
       </article>
@@ -2562,7 +2912,7 @@ footer{
 
         <p>
           Project requirements के अनुसार planning,
-          estimation और execution guidance।
+          estimation और execution guidance
         </p>
 
       </article>
@@ -2580,7 +2930,7 @@ footer{
 
         <p>
           Existing properties के renovation,
-          improvement और development solutions।
+          improvement और development solutions
         </p>
 
       </article>
@@ -2713,7 +3063,7 @@ footer{
         </h3>
 
         <p>
-          तय schedule के अनुसार project execution।
+          तय schedule के अनुसार project execution
         </p>
 
       </div>
@@ -2728,7 +3078,7 @@ footer{
         </h3>
 
         <p>
-          Skilled professionals और बेहतर site management।
+          Skilled professionals और बेहतर site management
         </p>
 
       </div>
@@ -2755,6 +3105,128 @@ footer{
 </section>
 
 
+
+
+<!-- =========================================
+     SUBITA INFRATECH - GALLERY ALBUM
+========================================= -->
+
+<section class="gallery-album-section" id="project-gallery">
+
+  <div class="gallery-album-card">
+
+    <img
+      src="project.png"
+      alt="SUBITA INFRATECH Construction Project"
+      class="gallery-cover"
+      id="galleryCoverImage"
+    >
+
+    <div class="gallery-cover-overlay"></div>
+
+    <div class="gallery-album-content">
+
+      <span class="gallery-eyebrow">
+        SUBITA INFRATECH • OUR WORK
+      </span>
+
+      <h2>Our Project Gallery</h2>
+
+      <h3>और प्रोजेक्ट गैलरी</h3>
+
+      <p>
+        हमारे सभी कंस्ट्रक्शन प्रोजेक्ट की तस्वीरें देखें।
+      </p>
+
+      <button
+        type="button"
+        class="gallery-open-btn"
+        id="galleryOpenBtn"
+      >
+        <i class="fa-solid fa-images"></i>
+        VIEW ALL PHOTOS
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ALL PHOTOS MODAL -->
+
+<div class="gallery-modal-v2" id="galleryModalV2">
+
+  <div class="gallery-modal-header">
+
+    <div>
+      <h2>Our Project Gallery</h2>
+      <p id="galleryTotalCount">Our Construction Projects</p>
+    </div>
+
+    <button
+      type="button"
+      class="gallery-close-btn"
+      id="galleryModalClose"
+      aria-label="Close gallery"
+    >
+      &times;
+    </button>
+
+  </div>
+
+  <div class="gallery-grid-v2" id="galleryGridV2"></div>
+
+</div>
+
+
+<!-- FULL IMAGE VIEWER -->
+
+<div class="gallery-viewer-v2" id="galleryViewerV2">
+
+  <button
+    type="button"
+    class="gallery-viewer-close"
+    id="galleryViewerClose"
+    aria-label="Close image"
+  >
+    &times;
+  </button>
+
+  <button
+    type="button"
+    class="gallery-viewer-prev"
+    id="galleryViewerPrev"
+    aria-label="Previous photo"
+  >
+    &#10094;
+  </button>
+
+  <img
+    src=""
+    alt="Construction Project Photo"
+    id="galleryViewerImage"
+  >
+
+  <button
+    type="button"
+    class="gallery-viewer-next"
+    id="galleryViewerNext"
+    aria-label="Next photo"
+  >
+    &#10095;
+  </button>
+
+  <div class="gallery-viewer-counter" id="galleryViewerCounter">
+    1 / 1
+  </div>
+
+</div>
+
+</section>
+
+      
 <!-- =========================================================
      TEAM / LEADERSHIP
 ========================================================= -->
@@ -2773,7 +3245,7 @@ footer{
 
       <p>
         SUBITA INFRATECH को आगे बढ़ाने वाली
-        leadership team।
+        leadership team
       </p>
 
     </div>
@@ -2817,7 +3289,7 @@ footer{
 
           <h3>NITIN SINGH</h3>
 
-          <p>(Founder)</p>
+          <p>      </p>
 
         </div>
 
@@ -3060,7 +3532,7 @@ footer{
           ">
 
           Construction, Infrastructure और Civil Engineering
-          solutions के लिए आपका भरोसेमंद partner।
+          solutions के लिए आपका भरोसेमंद partner
 
         </p>
 
@@ -4855,7 +5327,245 @@ ${d.message}`;
 
     window.location.href = mailto;
 }
+
+
+
+
+/* =========================================
+   SUBITA INFRATECH - GALLERY ENGINE
+========================================= */
+
+(() => {
+  const TOTAL_PHOTOS = 10000;
+
+  const openBtn = document.getElementById("galleryOpenBtn");
+  const modal = document.getElementById("galleryModalV2");
+  const closeBtn = document.getElementById("galleryModalClose");
+  const grid = document.getElementById("galleryGridV2");
+
+  const viewer = document.getElementById("galleryViewerV2");
+  const viewerImage = document.getElementById("galleryViewerImage");
+  const viewerClose = document.getElementById("galleryViewerClose");
+  const viewerPrev = document.getElementById("galleryViewerPrev");
+  const viewerNext = document.getElementById("galleryViewerNext");
+  const viewerCounter = document.getElementById("galleryViewerCounter");
+  const totalCount = document.getElementById("galleryTotalCount");
+
+  if (
+    !openBtn || !modal || !closeBtn || !grid ||
+    !viewer || !viewerImage || !viewerClose ||
+    !viewerPrev || !viewerNext || !viewerCounter
+  ) {
+    console.error("Gallery HTML elements are missing.");
+    return;
+  }
+
+  let photos = [];
+  let currentIndex = 0;
+  let touchStartX = 0;
+
+  // Check available photos in the main/root folder
+  function findPhotos() {
+    const checks = [];
+
+    for (let i = 1; i <= TOTAL_PHOTOS; i++) {
+      checks.push(
+        new Promise(resolve => {
+          const src = `project${i}.png`;
+          const img = new Image();
+
+          img.onload = () => resolve({
+            src: src,
+            number: i
+          });
+
+          img.onerror = () => resolve(null);
+
+          img.src = src;
+        })
+      );
+    }
+
+    return Promise.all(checks).then(results =>
+      results.filter(Boolean).sort((a, b) => a.number - b.number)
+    );
+  }
+
+  // Create gallery grid
+  function renderGallery() {
+    grid.innerHTML = "";
+
+    photos.forEach((photo, index) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "gallery-item-v2";
+      button.setAttribute("aria-label", `View project photo ${index + 1}`);
+
+      const img = document.createElement("img");
+      img.src = photo.src;
+      img.alt = `SUBITA INFRATECH Project ${photo.number}`;
+      img.loading = "lazy";
+
+      const number = document.createElement("span");
+      number.className = "gallery-photo-number";
+      number.textContent = `${index + 1}`;
+
+      button.appendChild(img);
+      button.appendChild(number);
+
+      button.addEventListener("click", () => openViewer(index));
+
+      grid.appendChild(button);
+    });
+
+    if (totalCount) {
+      totalCount.textContent =
+        `${photos.length} Construction Project Photos`;
+    }
+  }
+
+  // Open complete gallery
+  openBtn.addEventListener("click", async () => {
+    openBtn.disabled = true;
+    openBtn.style.opacity = ".7";
+
+    try {
+      photos = await findPhotos();
+      renderGallery();
+
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden";
+
+      if (photos.length === 0) {
+        grid.innerHTML =
+          '<p style="color:white;text-align:center;grid-column:1/-1;">No project photos found. Please upload project1.png, project2.png and so on.</p>';
+      }
+    } catch (error) {
+      console.error("Gallery loading error:", error);
+    } finally {
+      openBtn.disabled = false;
+      openBtn.style.opacity = "1";
+    }
+  });
+
+  // Close gallery
+  function closeGallery() {
+    modal.classList.remove("active");
+
+    if (!viewer.classList.contains("active")) {
+      document.body.style.overflow = "";
+    }
+  }
+
+  closeBtn.addEventListener("click", closeGallery);
+
+  // Open full image
+  function openViewer(index) {
+    if (!photos.length) return;
+
+    currentIndex = index;
+    updateViewer();
+
+    viewer.classList.add("active");
+  }
+
+  // Update full image and counter
+  function updateViewer() {
+    const photo = photos[currentIndex];
+
+    if (!photo) return;
+
+    viewerImage.src = photo.src;
+    viewerImage.alt = `SUBITA INFRATECH Project ${photo.number}`;
+
+    viewerCounter.textContent =
+      `${currentIndex + 1} / ${photos.length}`;
+  }
+
+  // Previous photo
+  function previousPhoto() {
+    if (!photos.length) return;
+
+    currentIndex =
+      (currentIndex - 1 + photos.length) % photos.length;
+
+    updateViewer();
+  }
+
+  // Next photo
+  function nextPhoto() {
+    if (!photos.length) return;
+
+    currentIndex =
+      (currentIndex + 1) % photos.length;
+
+    updateViewer();
+  }
+
+  viewerPrev.addEventListener("click", previousPhoto);
+  viewerNext.addEventListener("click", nextPhoto);
+
+  // Close full image
+  function closeViewer() {
+    viewer.classList.remove("active");
+    viewerImage.src = "";
+
+    if (!modal.classList.contains("active")) {
+      document.body.style.overflow = "";
+    }
+  }
+
+  viewerClose.addEventListener("click", closeViewer);
+
+  // Close on background click
+  viewer.addEventListener("click", event => {
+    if (event.target === viewer) {
+      closeViewer();
+    }
+  });
+
+  modal.addEventListener("click", event => {
+    if (event.target === modal) {
+      closeGallery();
+    }
+  });
+
+  // Keyboard navigation
+  document.addEventListener("keydown", event => {
+    if (!viewer.classList.contains("active")) {
+      if (event.key === "Escape" && modal.classList.contains("active")) {
+        closeGallery();
+      }
+      return;
+    }
+
+    if (event.key === "ArrowRight") nextPhoto();
+    if (event.key === "ArrowLeft") previousPhoto();
+    if (event.key === "Escape") closeViewer();
+  });
+
+  // Mobile swipe support
+  viewer.addEventListener("touchstart", event => {
+    touchStartX = event.changedTouches[0].screenX;
+  }, { passive: true });
+
+  viewer.addEventListener("touchend", event => {
+    const touchEndX = event.changedTouches[0].screenX;
+    const difference = touchEndX - touchStartX;
+
+    if (Math.abs(difference) < 50) return;
+
+    if (difference < 0) {
+      nextPhoto();
+    } else {
+      previousPhoto();
+    }
+  }, { passive: true });
+
+})();
+
 </script>
-      
+
 </body>
 </html>
+
