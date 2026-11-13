@@ -5354,15 +5354,11 @@ ${d.message}`;
 }
 
 
-
 /* =========================================
-   SUBITA INFRATECH - GALLERY ENGINE (AUTO INFINITE SCROLL)
+   SUBITA INFRATECH - BACKGROUND AUTO-LOADING GALLERY ENGINE (Batch Size 20)
 ========================================= */
 
 (() => {
-  const PAGE_SIZE = 10; // एक बार में 10 फोटो लोड होंगी
-  const SUPPORTED_EXTENSIONS = ['png', 'jpg', 'jpeg', 'webp'];
-
   const openBtn = document.getElementById("galleryOpenBtn");
   const modal = document.getElementById("galleryModalV2");
   const closeBtn = document.getElementById("galleryModalClose");
@@ -5381,139 +5377,112 @@ ${d.message}`;
     !viewer || !viewerImage || !viewerClose ||
     !viewerPrev || !viewerNext || !viewerCounter
   ) {
-    console.error("Gallery HTML elements are missing.");
     return;
   }
 
   let allPhotos = [];
-  let loadedCount = 0;
   let currentIndex = 0;
   let touchStartX = 0;
-  let isLoading = false;
+  let isChecking = false;
+  let isLoaded = false;
 
-  // सिंगल इमेज चेक करने का फंक्शन
-  function checkImageExists(baseName) {
+  // सिंगल .jpg चेक करने का सुपर-फास्ट फंक्शन
+  function checkJpgExists(photoNumber) {
     return new Promise(resolve => {
-      let extIndex = 0;
-
-      function tryNextExtension() {
-        if (extIndex >= SUPPORTED_EXTENSIONS.length) {
-          resolve(null);
-          return;
-        }
-
-        const ext = SUPPORTED_EXTENSIONS[extIndex];
-        const src = `${baseName}.${ext}`;
-        const img = new Image();
-
-        img.onload = () => resolve({ src: src, number: parseInt(baseName.replace('project', '')) });
-        img.onerror = () => {
-          extIndex++;
-          tryNextExtension();
-        };
-
-        img.src = src;
-      }
-
-      tryNextExtension();
+      const src = `project${photoNumber}.jpg`;
+      const img = new Image();
+      img.onload = () => resolve({ src: src, number: photoNumber });
+      img.onerror = () => resolve(null);
+      img.src = src;
     });
   }
 
-  // सभी उपलब्ध फोटो खोजना
-  async function discoverPhotos() {
-    if (allPhotos.length > 0) return allPhotos;
-    
-    let photos = [];
-    let i = 1;
-    let missingStreak = 0;
+  // वेबसाइट खुलते ही बैकग्राउंड में 20-20 के बैच में फोटो स्कैन और रेंडर करने का फंक्शन
+  async function discoverAndStreamPhotos() {
+    if (isChecking || isLoaded) return;
+    isChecking = true;
 
-    while (missingStreak < 5 && i <= 500) {
-      const result = await checkImageExists(`project${i}`);
-      if (result) {
-        photos.push(result);
-        missingStreak = 0;
-      } else {
-        missingStreak++;
+    grid.innerHTML = '<p style="color:white;text-align:center;grid-column:1/-1;">बैकग्राउंड में प्रोजेक्ट्स लोड हो रहे हैं...</p>';
+
+    const MAX_PHOTOS = 500; 
+    const BATCH_SIZE = 20;  // अब एक बार में 20-20 फोटो का बैच चेक होगा
+    let foundAny = false;
+
+    for (let start = 1; start <= MAX_PHOTOS; start += BATCH_SIZE) {
+      let end = Math.min(start + BATCH_SIZE - 1, MAX_PHOTOS);
+      let promises = [];
+
+      for (let i = start; i <= end; i++) {
+        promises.push(checkJpgExists(i));
       }
-      i++;
+
+      const results = await Promise.all(promises);
+      let validInBatch = results.filter(item => item !== null);
+
+      // 🛑 SMART BREAK: अगर इस बैच में एक भी फोटो नहीं मिली, तो लूप तुरंत बंद हो जाएगा
+      if (validInBatch.length === 0) {
+        break; 
+      }
+
+      if (!foundAny) {
+        foundAny = true;
+        grid.innerHTML = ""; // पहली फोटो मिलते ही लोडिंग टेक्स्ट हटा दें
+      }
+
+      validInBatch.sort((a, b) => a.number - b.number);
+
+      // DocumentFragment ताकि बैकग्राउंड में बिना किसी लैग के रेंडर हो सके
+      const fragment = document.createDocumentFragment();
+
+      validInBatch.forEach(photo => {
+        allPhotos.push(photo);
+        const actualIndex = allPhotos.length - 1;
+
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "gallery-item-v2";
+        button.setAttribute("aria-label", `View project photo ${actualIndex + 1}`);
+
+        const img = document.createElement("img");
+        img.src = photo.src;
+        img.alt = `SUBITA INFRATECH Project ${photo.number}`;
+        img.loading = "lazy";
+
+        const number = document.createElement("span");
+        number.className = "gallery-photo-number";
+        number.textContent = `${actualIndex + 1}`;
+
+        button.appendChild(img);
+        button.appendChild(number);
+
+        button.addEventListener("click", () => openViewer(actualIndex));
+        fragment.appendChild(button);
+      });
+
+      grid.appendChild(fragment);
+
+      if (totalCount) {
+        totalCount.textContent = `Construction Project Photos (${allPhotos.length} Loaded)`;
+      }
     }
-    
-    allPhotos = photos.sort((a, b) => a.number - b.number);
-    return allPhotos;
+
+    if (allPhotos.length === 0) {
+      grid.innerHTML = '<p style="color:white;text-align:center;grid-column:1/-1;">कोई प्रोजेक्ट फोटो नहीं मिली। कृपया project1.jpg अपलोड करें।</p>';
+    }
+
+    isChecking = false;
+    isLoaded = true;
   }
 
-  // फोटो ग्रिड में जोड़ने का फंक्शन
-  function renderBatch() {
-    if (isLoading) return;
-    if (loadedCount >= allPhotos.length) return;
-
-    isLoading = true;
-    const nextBatch = allPhotos.slice(loadedCount, loadedCount + PAGE_SIZE);
-    
-    nextBatch.forEach((photo, index) => {
-      const actualIndex = loadedCount + index;
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "gallery-item-v2";
-      button.setAttribute("aria-label", `View project photo ${actualIndex + 1}`);
-
-      const img = document.createElement("img");
-      img.src = photo.src;
-      img.alt = `SUBITA INFRATECH Project ${photo.number}`;
-      img.loading = "lazy";
-
-      const number = document.createElement("span");
-      number.className = "gallery-photo-number";
-      number.textContent = `${actualIndex + 1}`;
-
-      button.appendChild(img);
-      button.appendChild(number);
-
-      button.addEventListener("click", () => openViewer(actualIndex));
-
-      grid.appendChild(button);
-    });
-
-    loadedCount += nextBatch.length;
-    isLoading = false;
-
-    if (totalCount) {
-      totalCount.textContent = `${allPhotos.length} Construction Project Photos (${loadedCount} Shown)`;
-    }
-  }
-
-  // गैलरी खोलना
-  openBtn.addEventListener("click", async () => {
-    openBtn.disabled = true;
-    openBtn.style.opacity = ".7";
-
-    grid.innerHTML = '<p style="color:white;text-align:center;grid-column:1/-1;">लोड हो रहा है...</p>';
-    modal.classList.add("active");
-    document.body.style.overflow = "hidden";
-
-    try {
-      await discoverPhotos();
-      grid.innerHTML = "";
-      loadedCount = 0;
-
-      if (allPhotos.length === 0) {
-        grid.innerHTML = '<p style="color:white;text-align:center;grid-column:1/-1;">कोई प्रोजेक्ट फोटो नहीं मिली। कृपया project1.jpg या project1.png अपलोड करें।</p>';
-      } else {
-        renderBatch();
-      }
-    } catch (error) {
-      console.error("Gallery loading error:", error);
-    } finally {
-      openBtn.disabled = false;
-      openBtn.style.opacity = "1";
-    }
+  // 🌐 वेबसाइट खुलते ही बैकग्राउंड प्रोसेस चालू हो जाएगा
+  window.addEventListener("DOMContentLoaded", () => {
+    discoverAndStreamPhotos();
   });
 
-  // ऑटोमैटिक स्क्रॉल डिटेक्शन (जैसे ही नीचे पहुँचेंगे, अगली 10 फोटो लोड हो जाएंगी)
-  modal.addEventListener("scroll", () => {
-    if (modal.scrollTop + modal.clientHeight >= modal.scrollHeight - 150) {
-      renderBatch();
-    }
+  // गैलरी बटन दबाते ही मॉडल तुरंत खुल जाएगा (क्योंकि फोटो पहले से बैकग्राउंड में लोड हैं)
+  openBtn.addEventListener("click", () => {
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
   });
 
   // गैलरी बंद करना
